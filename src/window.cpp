@@ -171,7 +171,7 @@ int Window::runWindow() {
             if (ImGui::BeginTabItem("Convert")) {
                 ImGui::Text("From mm to m");
                 ImGui::PushItemWidth(100);
-                ImGui::InputFloat("Enter value in mm", &t.tmp_conv1);
+                ImGui::InputFloat("Enter value in mm ##1", &t.tmp_conv1);
                 if (ImGui::Button("Convert ##1"))
                     t.tmp_conv2 = util::convertMillimetersToMeters(t.tmp_conv1);
                 ImGui::Text("Converted value is %f m.", t.tmp_conv2);
@@ -187,7 +187,7 @@ int Window::runWindow() {
                 ImGui::Separator();
 
                 ImGui::Text("From mm to cm");
-                ImGui::InputFloat("Enter value in mm", &t.tmp_conv5);
+                ImGui::InputFloat("Enter value in mm ##2", &t.tmp_conv5);
                 if (ImGui::Button("Convert ##3"))
                     t.tmp_conv6 = util::convertMillimetersToCentimeters(t.tmp_conv5);
                 ImGui::Text("Converted value is %f cm.", t.tmp_conv6);
