@@ -312,7 +312,7 @@ int Window::runWindow() {
                 ImGui::Text("Absolute error: %.*f", t.dec_places, measureList1.getYErr());
                 ImGui::Text("Relative error: %.*f %%", t.dec_places, measureList1.getYErr() * 100 / measureList1.getAvY());
                 ImGui::SeparatorText("Total value");
-                ImGui::TextColored(t_colors[SUCCESS], "Y = %.*f +- %.*f kg*mm^2", t.dec_places, measureList1.getAvY(), t.dec_places, measureList1.getYErr());
+                ImGui::TextColored(t_colors[SUCCESS], "Y = %.*f +- %.*f", t.dec_places, measureList1.getAvY(), t.dec_places, measureList1.getYErr());
 
                 ImGui::EndTabItem();
             }
